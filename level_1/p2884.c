@@ -11,22 +11,33 @@
 // (입력과 같은 형태로 출력하면 된다.)
 
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 int main() {
 
-int H, M; 
+int H, M, newM; 
 
 scanf("%d %d", &H, &M); 
-if(H == 0) H = 24 ;
-if(M <= 45 ) {
+if(H == 0) {
+    H = 24; }
+else if(H ==1) {
+    H == 0; 
+}
+if(M < 45 ) {
     H = H-1; 
-    M = 60 - abs(M-45);  // 백준 이거 안대요 
+    // M = 60 - abs(M-45);  // 백준 이거 안대요 
+    newM = 60 + (M-45); // 45보다 작을때 45를 빼면 어차피 음수이기 때문에 60과 바로 더해줘도 빼기로 계산됨 
 }
 else {
-    M = M - 45; 
+    newM = M - 45; 
 }
 
-printf("%d %d \n",H ,M); 
+if(M != 45 && H != 0) {
+    printf("%d %d \n",H, newM); 
+}
 
-    return 0; 
+else if(M == 45 && H == 0){
+    printf(" \n");
+}
+
+    return 0;
 }
