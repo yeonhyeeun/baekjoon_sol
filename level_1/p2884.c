@@ -10,3 +10,23 @@
 // 출력 첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. 
 // (입력과 같은 형태로 출력하면 된다.)
 
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+
+int H, M; 
+
+scanf("%d %d", &H, &M); 
+if(H == 0) H = 24 ;
+if(M <= 45 ) {
+    H = H-1; 
+    M = 60 - abs(M-45);  // 백준 이거 안대요 
+}
+else {
+    M = M - 45; 
+}
+
+printf("%d %d \n",H ,M); 
+
+    return 0; 
+}
