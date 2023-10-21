@@ -44,7 +44,7 @@ if(A >= 24) {
     A = 0; 
 }
 
-printf("%d %d \n", A,B); 
+printf("%d %d\n", A,B); 
 
     return 0; 
 }
