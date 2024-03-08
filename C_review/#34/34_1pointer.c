@@ -29,6 +29,6 @@ int main() {
 
 // 아래 표현들은 *위치에 관계없이 다 같은 말임 
 // int* numPtr == int *numPtr == int * numPtr
-
+// int *는 영어로 pointer to int라고 읽는다. int포인터 라고 부른다
 
 
